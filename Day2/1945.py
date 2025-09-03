@@ -14,3 +14,9 @@ for tc in range(1, T+1):
         answer_lst.append(cnt)   # 다 셌으면 리스트에 추가
 
     print(f"#{tc}", *answer_lst)
+
+'''
+피드백
+리스트로 묶어서 하니깐 여러개 돌릴필요없이 깔끔하게 나오네요.
+다음에 할땐 저도 저렇게 해봐야겠어요.
+'''
