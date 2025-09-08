@@ -29,3 +29,15 @@ for tc in range(1, T + 1):
                 break  # 중지
 
     print(f"#{tc}", *orig)
+
+
+'''
+뒤집는 걸 어떻게 표현할지 몰라서 1과 0인 경우로 일일이 나눴는데,
+근영님의 코드를 보고 좋은 방법을 배웠다. (1-값)
+다음에는 꼭 아래처럼 활용해봐야겠다.
+
+if arr[m-step] == arr[m+step]:     # 마주보는 돌의 색이 같으면 뒤집기
+    arr[m-step] = 1 - arr[m-step]
+    arr[m+step] = 1 - arr[m+step]
+    
+'''
