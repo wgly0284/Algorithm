@@ -1,22 +1,18 @@
 t = int(input())
-for tc in range(1, t + 1):
-    a, b, n = map(int, input().split())
-    # x 저장된 값 A, y 저장된 값 B
-    # x += y 혹은 y += x
-    # x, y 둘 중 하나 이상에 저장된 값이 n 초과일 경우 그만
-    # 최소 연산 횟수?
+for tc in range(1, t+1):
+    N = input()   # 문자열로 받기
+    N_copy = N   # 처음엔 N을 문자열로 받아서 복사
+    # N, 2N, 3N, ...
+    appeared = set()
+    check = {i for i in range(10)}
 
-    cnt = 0
-    min_cnt = 0
-    while a <= n and b <= n:
-        if a < b:
-            a += b
-            cnt += 1
+    while True:
+        if appeared == check:
+            break
         else:
-            b += a
-            cnt += 1
-
-        if cnt > min_cnt:
-            min_cnt = cnt
-
-    print(min_cnt)
+            for n in str(N_copy):
+                appeared.add(int(n))
+        N_copy = int(N_copy)    # 숫자로 바꾼 N에다가
+        N_copy += int(N)   # 값 더하기 -> 2N, 3N, ...
+    result = int(N_copy)-int(N)
+    print(f"#{tc} {result}")
