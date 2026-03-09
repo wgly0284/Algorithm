@@ -61,3 +61,4 @@ for tc in range(1, t+1):
     color = [0]*N
     result = 1 if can_color(0) else 0
     print(f"#{tc} {result}")
+
